@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+header {
+    background-color: #89bcf6;
+    padding: 20px;
+    text-align: center;
+}
+.center-image{
+    display: flex;
+    justify-content: center;
+}
+.circular-image{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+header h1{
+    font-size: 40 px;
+    font-weight: bold;
+}
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(96, 172, 196);
+}
+
+header nav li {
+    float:left;
+}
+
+header nav li a {
+    display: block;
+    color: rgb(57, 37, 37);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+header nav li a:hover {
+    background-color: rgb(45, 163, 221);
+}
+  .container {
+    width: 100%;
+    height: 75vh;
+    
+    place-items: center; 
+     background-size: cover;  
+     background-position: center; 
+    
+     background-image: url(slidingimages/eng6.jpg);
+     background-size: 100% 100%;
+     box-shadow: rgba(149, 157, 165, 0.2)0px 8px 24px;
+     animation: changeimage 30s linear infinite;
+ } 
+
+  .container p {
+    font-size: 30px;
+    font-family: cursive;
+    font-weight: bold; 
+    color: rgb(0, 0, 0);
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+    margin-top: 150px;
+    
+        
+ } 
+
+
+
+.footer{
+    background-color: rgb(96, 172, 196);
+    color:rgb(57, 37, 37);
+    text-align: center;
+    padding: 10px;
+     position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.icons{
+    zoom: 20%;
+    position: relative;
+    float: right;
+    
+}
+ .img-slider{
+     width: 60%;
+    height: 600px;
+    background-image: url(eng4.webp);
+    background-size: 100% 100%;
+    animation: changeimage 20s linear infinite; 
+ } 
+ /* code writing so that we can slide images */
+ @keyframes changeimage {
+    0%{
+        background-image: url('eng4.webp');
+    }
+    25%{
+        background-image: url('eng5.jfif');
+    }
+    50%{
+        background-image: url('eng6.jpg');
+    }
+    75%{
+        background-image: url('eng7.jpg');
+    }
+    100%{
+        background-image: url('eng8.jpg');
+    } 
+
+    
+ } 
+ @media only screen and (max-width: 1024px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    header nav li a {
+        font-size: 16px;
+        padding: 10px 12px;
+    }
+
+    .container p {
+        font-size: 20px;
+    }
+
+    .text-container {
+        max-width: 80%;
+    }
+
+    .footer h2 {
+        font-size: 18px;
+    }
+
+    .img-slider {
+        height: 400px;
+    }
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 768px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    header nav li a {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .container p {
+        font-size: 16px;
+    }
+
+    .text-container {
+        max-width: 90%;
+    }
+
+    .footer h2 {
+        font-size: 16px;
+    }
+
+    .img-slider {
+        height: 300px;
+    }
+}
